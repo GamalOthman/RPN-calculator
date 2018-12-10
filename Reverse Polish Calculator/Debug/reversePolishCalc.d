@@ -1,0 +1,1 @@
+reversePolishCalc.o: ../reversePolishCalc.c
