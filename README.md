@@ -1,7 +1,7 @@
 # RPN-calculator
 Reverse Polish Notation basic Calculator with some functions
 
-/* ## Overall Description: ##
+ # Overall Description: 
  *
  * reverse polish calculator is a basic calculator that receives it's
  * operand after it's operators.
@@ -17,7 +17,7 @@ Reverse Polish Notation basic Calculator with some functions
  * This project is intended to make a small reverse polish calculator.
  * Please input operators and operands each separated by a space or a tab.
  *
- * ## Trigonometric Functions: ##
+# Trigonometric Functions:
  *
  * You can use trigonometric functions like(sin, cos, tan, exp, pow, sqrt)
  * Example: 90 sin↵
@@ -29,7 +29,7 @@ Reverse Polish Notation basic Calculator with some functions
  * Example 3: 5 2 pow↵
  * Result 3: 23
  *
- * ## Orders: ##
+# Orders:
  *
  * "print" order will print the top value of the stack.
  * Example: print↵
