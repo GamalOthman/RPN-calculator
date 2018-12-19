@@ -57,24 +57,25 @@
 
 #include <stdio.h>
 #include <stdlib.h>			//atof()
-#include <ctype.h>			//isdigit(), isblank(), isalpha()
+#include <ctype.h>			//isdigit()
 #include <string.h>			//strcmp()
-#include <math.h>			//sin(), sqrt(), ...
+#include <math.h>
 
 #define MAX 100
 #define STKMAX 50
 
-#define NUMBER 	'0'
+#define NUMBER 	'0'			//just a mark of a number
+
 #define PRINT 	'1'
 #define DUP 	'2'
 #define SWAP 	'3'
 #define CLEAR 	'4'
 
-#define	SIN	'5'
-#define COS	'6'
-#define TAN	'7'
-#define EXP	'8'
-#define POW	'9'
+#define	SIN		'5'
+#define COS		'6'
+#define TAN		'7'
+#define EXP		'8'
+#define POW		'9'
 #define SQRT	'A'
 
 #define STORE	'B'
@@ -83,11 +84,11 @@
 char inStr[MAX];
 double stack[STKMAX];
 double store[26];
-int sp = 0;				//stack pointer
-int getInput(void);
+int sp = 0;					//stack pointer
+int getInput(char *);
 void push(double);
 double pop(void);
-double popVal = 0.0;			//value from pop()
+double popVal = 0.0;		//value from pop()
 char read(void);
 char readVal = 0;			//value from read()
 void unread(char);
@@ -106,7 +107,7 @@ int main()
 	char view2 = 0;
 
 	//while(MAX == MAX){
-	while( (input = getInput()) != EOF ){
+	while( (input = getInput(inStr)) != EOF ){
 		switch(input){
 		//number:
 		case NUMBER:
@@ -223,18 +224,17 @@ int main()
 	return 0;
 }
 
-int getInput()
+int getInput(char *s)
 {
-	int i=0;
-	clear(inStr);
+	char *sstart = s;
 
 	char oneCharReturn[MAX] = "\n+*/%";
 
 	//if input is blank or tap, skip it
 	while( isblank(read()) )
 		;
-	inStr[i++] = readVal;
-	inStr[i] = '\0';
+	*s++ = readVal;
+	*s = '\0';
 
 	if( strchr(oneCharReturn, readVal) != '\0' )
 		return readVal;
@@ -247,8 +247,8 @@ int getInput()
 			unread(readVal);
 	}
 	if( isalpha(readVal) )
-		while( read() != '\n' && i < 10 ){
-			inStr[i++] = readVal;
+		while( read() != '\n' && s-sstart < 10 ){
+			*s++ = readVal;
 
 			if( !strcmp(inStr, "print") ){ getchar(); return PRINT; }
 			if( !strcmp(inStr, "dup") ){ return DUP; }
@@ -264,19 +264,21 @@ int getInput()
 
 			if( !strcmp(inStr, "store") ){ return STORE;}
 			if( !strcmp(inStr, "view") ){ return VIEW;}
+
+			if( !strcmp(inStr, "exit") ){return -1;}
 	}
 	if( isdigit(readVal) || readVal == '-' ){
 		while( isdigit(read()) )
-			inStr[i++] = readVal;
+			*s++ = readVal;
 		if(readVal == '.'){
-			inStr[i++] = '.';
+			*s++ = '.';
 			while( isdigit(read()) )
-				inStr[i++] = readVal;
+				*s++ = readVal;
 		}
 
 		if( readVal != EOF )
 			unread(readVal);
-		inStr[i] = '\0';
+		*s = '\0';
 		return NUMBER;
 	}
 	return 0;
