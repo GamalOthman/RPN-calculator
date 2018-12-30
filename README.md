@@ -23,13 +23,13 @@ Reverse Polish Notation basic calculator with some functions.
    
    Result: 1
    
- * Example 2: 2 exp↵
+ * Example: 2 exp↵
    
-   Result 2: 7.3890561
+   Result: 7.3890561
  
- * Example 3: 5 2 pow↵
+ * Example: 5 2 pow↵
    
-   Result 3: 23
+   Result: 23
  
 # Orders:
 
@@ -69,9 +69,9 @@ Reverse Polish Notation basic calculator with some functions.
    
    Result: a = 5.67
    
-   Example 2: view a-z↵
+   Example: view a-z↵
    
-   Result 2: a = 5.67↵ b = 0↵ ... z = 0
+   Result: a = 5.67↵ b = 0↵ ... z = 0
    
  * "exit" order will exit the program.
  
