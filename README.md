@@ -18,41 +18,59 @@ Reverse Polish Notation basic calculator with some functions.
 # Trigonometric Functions:
 
  * You can use trigonometric functions like(sin, cos, tan, exp, pow, sqrt)
+   
    Example: 90 sin↵
+   
    Result: 1
    
  * Example 2: 2 exp↵
+   
    Result 2: 7.3890561
  
  * Example 3: 5 2 pow↵
+   
    Result 3: 23
  
 # Orders:
 
  * "print" order will print the top value of the stack.
+   
    Example: print↵
+   
    Result: 8.34
 
  * "dup" order will duplicate it's operand.
+   
    Example: 5 dup *↵
-  Result: 25
+   
+   Result: 25
  
  * "swap" order will swap the previous two operators.
-  Example: 2 5 swap /↵
-  Result: 2.5
+   
+   Example: 2 5 swap /↵
+   
+   Result: 2.5
  
  * "clear" order will clear the contents of stack[] and store[].
+   
    Example: clear↵
+   
    Result: stack cleared!↵ store cleared!
  
  * "store" order will store the previous value in the corresponding one-char variable.
+   
    Example: 5.67 store a↵
+   
    Result: a = 5.67
 
  * "view" order will view the contents of the corresponding variable/s.
+   
    Example: view a↵
+   
    Result: a = 5.67
+   
    Example 2: view a-z↵
+   
    Result 2: a = 5.67↵ b = 0↵ ... z = 0
    
  * "exit" order will exit the program.
