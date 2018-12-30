@@ -77,8 +77,10 @@ Reverse Polish Notation basic calculator with some functions.
    `clear↵`
 
    *Result*   
-   `stack cleared! 
-   store cleared!`
+   ```
+   stack cleared!   
+   store cleared!
+   ```
 
 ### Store
 
@@ -104,8 +106,13 @@ Reverse Polish Notation basic calculator with some functions.
    `view a-z↵`
 
    *Result*   
-   `a = 5.67↵ b = 0
-   ... z = 0`
+   ```
+   a = 5.67
+   b = 0
+   c = 0
+   ...
+   z = 0
+   ```
   
 ### Exit
   
