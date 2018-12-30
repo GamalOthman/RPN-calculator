@@ -19,22 +19,22 @@ Reverse Polish Notation basic calculator with some functions.
 
  * Trigonometric functions embedded in this program is: `sin`, `cos`, `tan`, `exp`, `pow` and `sqrt`.
    
- ### Example: 
+ *Example*   
    `90 sin↵`
    
-   Result:   
+ *Result*  
    `1`
    
- ### Example: 
+ *Example*   
  `2 exp↵`
    
-   Result:   
+ *Result*   
    `7.3890561`
  
- ### Example: 
+ *Example*   
  `5 2 pow↵`
    
-   Result:  
+ *Result*   
    `23`
  
 ## Orders:
@@ -42,75 +42,75 @@ Reverse Polish Notation basic calculator with some functions.
 ### Print
 
    `print` order will print the top value of the stack.
-   
-   #### Example: 
+
+   *Example*   
    `print↵`
-   
-   Result:  
+
+   *Result*   
    `8.34`
 
 ### Duplicate
 
    `dup` order will duplicate it's operand.
-   
-   #### Example: 
+
+   *Example*   
    `5 dup *↵`
-   
-   Result:  
+
+   *Result*     
    `25`
  
 ### Swap
  
    `swap` order will swap the previous two operators.
-   
-   #### Example: 
+
+   *Example*   
    `2 5 swap /↵`
-   
-   Result:  
+
+   *Result*   
    `2.5`
  
 ### Clear
   
   `clear` order will clear the contents of stack[] and store[].
-   
-   #### Example: 
+
+   *Example*   
    `clear↵`
-   
-   Result:   
+
+   *Result*   
    `stack cleared! 
    store cleared!`
 
 ### Store
 
    `store` order will store the previous value in the corresponding one-char variable.
-   
-   #### Example: 
+
+   *Example*   
    `5.67 store a↵`
-   
-   Result:  
+
+   *Result*   
    `a = 5.67`
 
 ### View
   
    `view` order will view the contents of the corresponding variable/s.
-   
-   #### Example: 
+
+   *Example*   
    `view a↵`
-   
-   Result:  
+
+   *Result*     
    `a = 5.67`
-   
-   #### Example: 
+
+   *Example*   
    `view a-z↵`
-   
-   Result:  
+
+   *Result*   
    `a = 5.67↵ b = 0
    ... z = 0`
   
 ### Exit
   
    `exit` order will exit the program.
-   
-   #### Example:
+
+   *Example*   
    `exit`
  
